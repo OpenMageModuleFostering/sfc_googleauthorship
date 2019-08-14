@@ -1,0 +1,18 @@
+<?php
+	// Lookup author
+	$_author = $this->getAuthor();
+?>
+
+<?php if($_author) : ?>
+<div class="author-block">
+	<span class="author-link">By 
+		<a 
+			href="<?php echo $_author->getProfileUrl(); ?>?rel=author" 
+			target="_blank" rel="author" 
+			title="<?php echo $_author->getName() ?>" 
+		>
+			<?php echo $_author->getName() ?>
+		</a>
+	</span>
+</div>	
+<?php endif; ?>

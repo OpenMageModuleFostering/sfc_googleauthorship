@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+    <name>SFC_GoogleAuthorship</name>
+    <version>1.0.1</version>
+    <stability>stable</stability>
+    <license uri="http://opensource.org/licenses/osl-3.0.php">Open Software License (OSL 3.0)</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>The StoreFront Google Authorship extension allows you to associate Google Authorship tags with your CMS content.</summary>
+    <description>The StoreFront Google Authorship Magento extension allows you to link Magento CMS pages to with Google authorship information by using rel="author" on relevant CMS pages. The author is configurable on page-by-page basis and the extension places an authorship block at the bottom of your CMS page content, as well as placing the tag in your page.</description>
+    <notes>Stable release</notes>
+    <authors><author><name>luke james</name><user>lj</user><email>ljames@storefrontconsulting.com</email></author></authors>
+    <date>2013-03-13</date>
+    <time>15:30:24</time>
+    <contents><target name="mageetc"><dir name="modules"><file name="SFC_GoogleAuthorship.xml" hash="a87356d3b4349a3a4ceb866ebff5ff7c"/></dir></target><target name="magelocal"><dir name="SFC"><dir name="GoogleAuthorship"><dir><dir name="Block"><dir name="Adminhtml"><dir name="Author"><dir name="Edit"><file name="Form.php" hash="2c16eaeaf34014c5a0642f6b828cd5ec"/><dir name="Tab"><file name="Form.php" hash="d3b335829af5e1f8fe41645c424dc622"/></dir><file name="Tabs.php" hash="6952cf4373ec452de29a3c9f82928911"/></dir><file name="Edit.php" hash="1aa68efb2a1d09d4b83091610223cc70"/><file name="Grid.php" hash="2588f3bcf0f79f4e6f96ae11db0e4a82"/></dir><file name="Author.php" hash="756eabda95df707afe7bbd4b384f7d7b"/></dir><file name="Author.php" hash="3a1f27e52bc676ab7fe5a4f9fae97765"/></dir><dir name="Helper"><file name="Data.php" hash="a6a0ff1307c2ebf76a5254c050cc1a13"/></dir><dir name="Model"><file name="Author.php" hash="49a888dc278b242c76096f09e97ec0b9"/><dir name="Mysql4"><dir name="Author"><file name="Collection.php" hash="c8a8572cb9cd06bea8e1f424867ab115"/></dir><file name="Author.php" hash="89319d925371b7441322e9738e96f293"/></dir><file name="Observer.php" hash="41eea507c445e6da6bc4de42bb632b5e"/></dir><dir name="controllers"><dir name="Adminhtml"><file name="AuthorController.php" hash="1af3a746cf5658242f07773655338e6e"/></dir></dir><dir name="etc"><file name="adminhtml.xml" hash="a41ff70eebef6c18b8a62c6dbf58cf0f"/><file name="config.xml" hash="509887f246eef209d6b78c75c053e730"/><file name="system.xml" hash="1ae5f29f63cc98a73437ec0b9156b199"/></dir><dir name="sql"><dir name="googleauthorship_setup"><file name="mysql4-install-1.0.1.php" hash="884c08a6573153911a0b2fb228e9fac5"/><file name="mysql4-upgrade-1.0.0-1.0.1.php" hash="133b95fec7cb3e1b32082a273f419db9"/></dir></dir></dir></dir></dir></target><target name="magedesign"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="layout"><file name="googleauthorship.xml" hash="42533998a05323ec890dbe2b6761e6af"/></dir></dir></dir></dir><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="googleauthorship.xml" hash="b3788257e50d512aee773d5457adb4b6"/></dir><dir name="template"><dir name="googleauthorship"><file name="author_block.phtml" hash="9890d1ddffd129dad4224e8f57f1412f"/></dir></dir></dir></dir></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.0.0</min><max>6.0.0</max></php></required></dependencies>
+</package>

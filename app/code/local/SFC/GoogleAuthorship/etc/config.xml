@@ -1,0 +1,153 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * SFC - Google Authorship Extension
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to support@storefrontconsulting.com so we can send you a copy immediately.
+ * 
+ * @package    SFC_GoogleAuthorship
+ * @copyright  (C)Copyright 2013 StoreFront Consulting, Inc (http://www.StoreFrontConsulting.com/)
+ * @author     Luke James : ljames@storefrontconsulting.com
+ */
+-->
+<config>
+	<!-- Module version info -->
+	<modules>
+		<SFC_GoogleAuthorship>
+			<version>1.0.1</version>
+		</SFC_GoogleAuthorship>
+	</modules>
+
+	<!-- Frontend changes -->
+	<frontend>
+		<layout>
+			<updates>
+				<googleauthorship>
+					<file>googleauthorship.xml</file>
+				</googleauthorship>
+			</updates>
+		</layout>
+	</frontend>
+
+	<global>
+		<!-- Helper classes -->
+		<helpers>
+			<googleauthorship>
+				<class>SFC_GoogleAuthorship_Helper</class>
+			</googleauthorship>
+		</helpers>
+
+		<!-- Block classes -->
+		<blocks>
+			<googleauthorship>
+				<class>SFC_GoogleAuthorship_Block</class>
+			</googleauthorship>
+		</blocks>
+
+		<!-- Model / entity classes -->
+		<models>
+			<googleauthorship>
+				<class>SFC_GoogleAuthorship_Model</class>
+				<resourceModel>googleauthorship_mysql4</resourceModel>
+			</googleauthorship>
+			<googleauthorship_mysql4>
+				<class>SFC_GoogleAuthorship_Model_Mysql4</class>
+				<entities>
+					<author>
+						<table>sfc_googleauthor</table>
+					</author>
+				</entities>
+			</googleauthorship_mysql4>
+		</models>
+
+		<!-- Resources - Install / upgrade scripts -->
+		<resources>
+			<googleauthorship_setup>
+				<setup>
+					<module>SFC_GoogleAuthorship</module>
+				</setup>
+				<connection>
+					<use>core_setup</use>
+				</connection>
+			</googleauthorship_setup>
+			<googleauthorship_write>
+				<connection>
+					<use>core_write</use>
+				</connection>
+			</googleauthorship_write>
+			<googleauthorship_read>
+				<connection>
+					<use>core_read</use>
+				</connection>
+			</googleauthorship_read>
+		</resources>
+
+		<!-- Event observers -->
+		<events>
+			<!-- Add field input to CMS page edit form -->
+			<adminhtml_cms_page_edit_tab_main_prepare_form>
+				<observers>
+					<googleauthorship_page_edit_tab_content>
+						<type>singleton</type>
+						<class>SFC_GoogleAuthorship_Model_Observer</class>
+						<method>cmsField</method>
+					</googleauthorship_page_edit_tab_content>
+				</observers>
+			</adminhtml_cms_page_edit_tab_main_prepare_form>
+
+			<!-- filter null value in cms edit form -->
+			<cms_page_prepare_save>
+				<observers>
+					<googleauthorship_page_prepare_save>
+						<type>singleton</type>
+						<class>SFC_GoogleAuthorship_Model_Observer</class>
+						<method>filterCMSvalue</method>
+					</googleauthorship_page_prepare_save>
+				</observers>
+			</cms_page_prepare_save>
+		</events>
+
+	</global>
+
+	<!-- Admin panel routers -->
+	<admin>
+		<routers>
+			<googleauthorship>
+				<use>admin</use>
+				<args>
+					<module>SFC_GoogleAuthorship</module>
+					<frontName>googleauthorship</frontName>
+				</args>
+			</googleauthorship>
+		</routers>
+	</admin>
+
+	<!-- Admin panel layout updates -->
+	<adminhtml>
+		<layout>
+			<updates>
+				<googleauthorship>
+					<file>googleauthorship.xml</file>
+				</googleauthorship>
+			</updates>
+		</layout>
+	</adminhtml>
+
+	<!-- Default configuration values -->
+	<default>
+		<sfc_googleauthorship>
+			<general>
+				<enabled>1</enabled>
+			</general>
+		</sfc_googleauthorship>
+	</default>
+
+</config>
