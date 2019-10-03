@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/SFC_GoogleAuthorship",
+    "name": "OpenMageModuleFostering\/SFC_GoogleAuthorship",
     "type": "magento-module",
     "license": "Open-Software-License-(OSL-3.0)",
     "homepage": "",
     "description": "The StoreFront Google Authorship extension allows you to associate Google Authorship tags with your CMS content.",
     "authors": [
-    {
-        "name": "luke james",
-        "email": "ljames@storefrontconsulting.com"
-    }
-],
+        {
+            "name": "luke james",
+            "email": "ljames@storefrontconsulting.com"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
