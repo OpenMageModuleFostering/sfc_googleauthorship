@@ -1,3 +1,5 @@
+
+
 ## Original Package Description
 
 The StoreFront Google Authorship extension allows you to associate Google Authorship tags with your CMS content.
